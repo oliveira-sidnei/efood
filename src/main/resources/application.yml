@@ -1,0 +1,22 @@
+server:
+  error:
+    include-message: always
+
+spring:
+  h2:
+    console:
+      enabled: true
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+  application:
+    name: efood-app
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: ${DB_URL:jdbc:h2:mem:db_transaction}o
+    username: ${DB_USER:user_app}
+    password: ${DB_PASSWORD:masterkey}
